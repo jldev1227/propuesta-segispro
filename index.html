@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propuesta SEGISPRO - Julián López</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         * {
             margin: 0;
@@ -51,16 +54,22 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
-            animation: pulse 4s ease-in-out infinite;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+            animation: pulse 6s ease-in-out infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
         }
 
         .hero-content {
@@ -93,14 +102,13 @@
         .hero h1 {
             font-size: 4.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #10b981 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 30px;
             letter-spacing: -2px;
             line-height: 1.1;
-            text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
         }
 
         .hero .subtitle {
@@ -125,7 +133,7 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .badge:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
@@ -146,7 +154,7 @@
         .section-title {
             font-size: 3rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, #475569 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -173,7 +181,7 @@
             backdrop-filter: blur(20px);
             padding: 50px 40px;
             border-radius: 28px;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(0, 0, 0, 0.08),
                 inset 0 1px 0 rgba(255, 255, 255, 0.8);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -181,7 +189,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .stat-card::before {
             content: '';
             position: absolute;
@@ -195,25 +203,27 @@
 
         .stat-card:hover {
             transform: translateY(-12px) scale(1.02);
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(59, 130, 246, 0.2),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
         }
-        
+
         .stat-card:hover::before {
             left: 100%;
         }
 
-        .stat-card:nth-child(1) { 
-            border-top: 4px solid var(--accent); 
+        .stat-card:nth-child(1) {
+            border-top: 4px solid var(--accent);
             box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
         }
-        .stat-card:nth-child(2) { 
-            border-top: 4px solid var(--warning); 
+
+        .stat-card:nth-child(2) {
+            border-top: 4px solid var(--warning);
             box-shadow: 0 8px 32px rgba(245, 158, 11, 0.1);
         }
-        .stat-card:nth-child(3) { 
-            border-top: 4px solid var(--success); 
+
+        .stat-card:nth-child(3) {
+            border-top: 4px solid var(--success);
             box-shadow: 0 8px 32px rgba(16, 185, 129, 0.1);
         }
 
@@ -246,7 +256,7 @@
             backdrop-filter: blur(20px);
             padding: 40px 35px;
             border-radius: 24px;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(0, 0, 0, 0.06),
                 inset 0 1px 0 rgba(255, 255, 255, 0.8);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -254,7 +264,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .feature-card::before {
             content: '';
             position: absolute;
@@ -268,11 +278,11 @@
 
         .feature-card:hover {
             transform: translateY(-8px) scale(1.02);
-            box-shadow: 
+            box-shadow:
                 0 16px 48px rgba(59, 130, 246, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
         }
-        
+
         .feature-card:hover::before {
             left: 100%;
         }
@@ -306,7 +316,7 @@
             backdrop-filter: blur(20px);
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 
+            box-shadow:
                 0 8px 32px rgba(0, 0, 0, 0.06),
                 inset 0 1px 0 rgba(255, 255, 255, 0.9);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -317,7 +327,7 @@
 
         .phase:hover {
             transform: translateY(-8px);
-            box-shadow: 
+            box-shadow:
                 0 20px 60px rgba(59, 130, 246, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
         }
@@ -339,12 +349,12 @@
             font-weight: 800;
             font-size: 1.5rem;
             margin-bottom: 24px;
-            box-shadow: 
+            box-shadow:
                 0 8px 24px rgba(59, 130, 246, 0.3),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
             position: relative;
         }
-        
+
         .phase-number::before {
             content: '';
             position: absolute;
@@ -358,11 +368,22 @@
             opacity: 0.3;
             animation: pulse-ring 2s ease-in-out infinite;
         }
-        
+
         @keyframes pulse-ring {
-            0% { transform: scale(1); opacity: 0.3; }
-            50% { transform: scale(1.1); opacity: 0.1; }
-            100% { transform: scale(1); opacity: 0.3; }
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
         }
 
         .phase h3 {
@@ -417,16 +438,14 @@
         }
 
         .budget-section {
-            background: var(--gradient-tech);
-            border-radius: 40px;
+            background: linear-gradient(135deg, #1e293b 0%, #334155 40%, #475569 100%);
+            border-radius: 24px;
             padding: 100px 60px;
             color: white;
             margin: 120px 0;
             position: relative;
             overflow: hidden;
-            box-shadow: 
-                0 20px 60px rgba(15, 23, 42, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         .budget-section::before {
@@ -436,16 +455,39 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(circle at 70% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
-            animation: float 6s ease-in-out infinite;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+            animation: subtle-glow 6s ease-in-out infinite;
         }
-        
+
+        @keyframes subtle-glow {
+
+            0%,
+            100% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+
         @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            33% { transform: translateY(-10px) rotate(1deg); }
-            66% { transform: translateY(5px) rotate(-1deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            33% {
+                transform: translateY(-10px) rotate(1deg);
+            }
+
+            66% {
+                transform: translateY(5px) rotate(-1deg);
+            }
         }
 
         .budget-amount {
@@ -453,6 +495,24 @@
             font-weight: 800;
             text-align: center;
             margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -2px;
+            position: relative;
+        }
+
+        .budget-amount::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            border-radius: 1px;
         }
 
         .budget-desc {
@@ -469,18 +529,37 @@
         }
 
         .payment-card {
-            background: rgba(255, 255, 255, 0.12);
-            backdrop-filter: blur(10px);
-            padding: 35px 30px;
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            padding: 45px 35px;
+            border-radius: 24px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
         }
 
         .payment-card:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .payment-card:hover::before {
+            left: 100%;
         }
 
         .payment-percent {
@@ -488,6 +567,7 @@
             font-weight: 800;
             display: block;
             margin-bottom: 8px;
+            color: white;
         }
 
         .payment-amount {
@@ -696,29 +776,42 @@
             }
         }
 
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-        
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
         .parallax-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.02) 0%, transparent 50%);
             z-index: -1;
             animation: parallax 20s linear infinite;
         }
-        
+
         @keyframes parallax {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-50px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-50px);
+            }
         }
-        
+
         .tech-particle {
             position: absolute;
             width: 4px;
@@ -727,15 +820,29 @@
             border-radius: 50%;
             animation: float-particle 8s linear infinite;
         }
-        
+
         @keyframes float-particle {
-            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="parallax-bg"></div>
     <div class="hero">
@@ -761,32 +868,32 @@
         </div>
 
         <div class="features">
-            <div class="feature-card fade-up">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
                 <div class="feature-icon">🤖</div>
                 <h3>BOT Inteligente AI</h3>
                 <p>Extracción automática de órdenes desde portales ARL con inteligencia artificial</p>
             </div>
-            <div class="feature-card fade-up delay-1">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
                 <div class="feature-icon">📄</div>
                 <h3>OCR con Azure</h3>
                 <p>Digitalización instantánea y procesamiento inteligente de documentos</p>
             </div>
-            <div class="feature-card fade-up delay-2">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
                 <div class="feature-icon">📅</div>
                 <h3>Calendarios Sync</h3>
                 <p>Integración completa con Google Calendar y Outlook</p>
             </div>
-            <div class="feature-card fade-up">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
                 <div class="feature-icon">🔔</div>
                 <h3>Notificaciones Smart</h3>
                 <p>Alertas automáticas inteligentes por WhatsApp y email</p>
             </div>
-            <div class="feature-card fade-up delay-1">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="500">
                 <div class="feature-icon">👥</div>
                 <h3>Gestión de Equipo</h3>
                 <p>Control inteligente de profesionales y asignaciones automáticas</p>
             </div>
-            <div class="feature-card fade-up delay-2">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="600">
                 <div class="feature-icon">📊</div>
                 <h3>Analytics & Reportes</h3>
                 <p>Generación automática de Excel/PDF con métricas avanzadas</p>
@@ -799,144 +906,158 @@
         </div>
 
         <div class="timeline">
-            <div class="phase fade-up">
+            <div class="phase" data-aos="slide-right">
                 <div class="phase-content">
                     <div class="phase-number">1</div>
                     <h3>Análisis de Requerimientos</h3>
                     <p class="phase-duration">Semana 1</p>
-                    <p>Reunión con gerencia y equipo de EGISPRO. Levantamiento de procesos actuales y flujos con las ARL. Definición de roles de usuario (admin, profesional, cliente). Documentación inicial de alcance.</p>
+                    <p>Reunión con gerencia y equipo de EGISPRO. Levantamiento de procesos actuales y flujos con las
+                        ARL. Definición de roles de usuario (admin, profesional, cliente). Documentación inicial de
+                        alcance.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Documento de requerimientos y alcance del proyecto
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-1">
+            <div class="phase" data-aos="slide-left">
                 <div class="phase-content">
                     <div class="phase-number">2</div>
                     <h3>Diseño de Arquitectura</h3>
                     <p class="phase-duration">Semana 2</p>
-                    <p>Diagramas de arquitectura (frontend, backend, base de datos, integraciones externas). Selección de stack definitivo (Next.js, Node, Prisma, PostgreSQL, Azure). Configuración de repositorios y entorno de desarrollo.</p>
+                    <p>Diagramas de arquitectura (frontend, backend, base de datos, integraciones externas). Selección
+                        de stack definitivo (Next.js, Node, Prisma, PostgreSQL, Azure). Configuración de repositorios y
+                        entorno de desarrollo.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Arquitectura documentada y entorno configurado
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-2">
+            <div class="phase" data-aos="fade-up">
                 <div class="phase-content">
                     <div class="phase-number">3</div>
                     <h3>Modelado de Base de Datos</h3>
                     <p class="phase-duration">Semana 3</p>
-                    <p>Diseño de entidades (Órdenes, Profesionales, Clientes, Actividades, Documentos). Creación de esquema inicial con Prisma + PostgreSQL. Migraciones iniciales y validación de relaciones.</p>
+                    <p>Diseño de entidades (Órdenes, Profesionales, Clientes, Actividades, Documentos). Creación de
+                        esquema inicial con Prisma + PostgreSQL. Migraciones iniciales y validación de relaciones.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Base de datos modelada y configurada
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up">
+            <div class="phase" data-aos="slide-right">
                 <div class="phase-content">
                     <div class="phase-number">4</div>
                     <h3>Mockups y UX/UI</h3>
                     <p class="phase-duration">Semana 4</p>
-                    <p>Diseño de pantallas principales: dashboard, órdenes, calendario. Prototipo visual en Figma o similar. Validación de interfaz con gerencia.</p>
+                    <p>Diseño de pantallas principales: dashboard, órdenes, calendario. Prototipo visual en Figma o
+                        similar. Validación de interfaz con gerencia.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Diseños UI/UX aprobados y sistema de diseño
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-1">
+            <div class="phase" data-aos="slide-left">
                 <div class="phase-content">
                     <div class="phase-number">5</div>
                     <h3>Backend Inicial</h3>
                     <p class="phase-duration">Semana 5</p>
-                    <p>Configuración de API GraphQL/REST. Endpoints base para Órdenes y Profesionales. Autenticación JWT y roles.</p>
+                    <p>Configuración de API GraphQL/REST. Endpoints base para Órdenes y Profesionales. Autenticación JWT
+                        y roles.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> API base funcional con autenticación
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-2">
+            <div class="phase" data-aos="fade-up">
                 <div class="phase-content">
                     <div class="phase-number">6</div>
                     <h3>BOT AI (Scraping ARL)</h3>
                     <p class="phase-duration">Semana 6</p>
-                    <p>Desarrollo del bot (Puppeteer/Playwright). Automatización de login y consulta de órdenes. Registro automático en la base de datos.</p>
+                    <p>Desarrollo del bot (Puppeteer/Playwright). Automatización de login y consulta de órdenes.
+                        Registro automático en la base de datos.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> BOT inteligente funcional y monitoreado
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up">
+            <div class="phase" data-aos="slide-right">
                 <div class="phase-content">
                     <div class="phase-number">7</div>
                     <h3>OCR y Documentos</h3>
                     <p class="phase-duration">Semana 7</p>
-                    <p>Integración de Azure Cognitive Services (OCR). Extracción de datos de documentos de soporte. Validación de estructura de archivos y almacenamiento en Azure.</p>
+                    <p>Integración de Azure Cognitive Services (OCR). Extracción de datos de documentos de soporte.
+                        Validación de estructura de archivos y almacenamiento en Azure.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Sistema OCR integrado con Azure
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-1">
+            <div class="phase" data-aos="slide-left">
                 <div class="phase-content">
                     <div class="phase-number">8</div>
                     <h3>Notificaciones</h3>
                     <p class="phase-duration">Semana 8</p>
-                    <p>Integración con Outlook SMTP para correos. Integración con API de WhatsApp Business. Sistema de recordatorios automáticos.</p>
+                    <p>Integración con Outlook SMTP para correos. Integración con API de WhatsApp Business. Sistema de
+                        recordatorios automáticos.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Sistema de notificaciones completo
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-2">
+            <div class="phase" data-aos="fade-up">
                 <div class="phase-content">
                     <div class="phase-number">9</div>
                     <h3>Calendario y Profesionales</h3>
                     <p class="phase-duration">Semana 9</p>
-                    <p>Integración con Google/Outlook Calendar API. Módulo de agenda de profesionales. Vista mensual con actividades programadas.</p>
+                    <p>Integración con Google/Outlook Calendar API. Módulo de agenda de profesionales. Vista mensual con
+                        actividades programadas.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Módulo de profesionales y calendarios integrados
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up">
+            <div class="phase" data-aos="slide-right">
                 <div class="phase-content">
                     <div class="phase-number">10</div>
                     <h3>Dashboard y Reportes</h3>
                     <p class="phase-duration">Semana 10</p>
-                    <p>Dashboard central con métricas de estado de servicios. Exportación de reportes en PDF y Excel. Gráficas con estadísticas de pérdidas/ahorros.</p>
+                    <p>Dashboard central con métricas de estado de servicios. Exportación de reportes en PDF y Excel.
+                        Gráficas con estadísticas de pérdidas/ahorros.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Dashboard completo y sistema de reportes
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-1">
+            <div class="phase" data-aos="slide-left">
                 <div class="phase-content">
                     <div class="phase-number">11</div>
                     <h3>Pruebas y QA</h3>
                     <p class="phase-duration">Semana 11</p>
-                    <p>Pruebas unitarias y de integración. Ajustes de seguridad (tokens, permisos). Corrección de bugs.</p>
+                    <p>Pruebas unitarias y de integración. Ajustes de seguridad (tokens, permisos). Corrección de bugs.
+                    </p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Sistema probado y auditado
                     </div>
                 </div>
             </div>
 
-            <div class="phase fade-up delay-2">
+            <div class="phase" data-aos="fade-up">
                 <div class="phase-content">
                     <div class="phase-number">12</div>
                     <h3>Despliegue y Capacitación</h3>
                     <p class="phase-duration">Semana 12</p>
-                    <p>Deploy final en Vercel + Azure. Entrenamiento a personal de EGISPRO. Entrega de manual de usuario y documentación técnica.</p>
+                    <p>Deploy final en Vercel + Azure. Entrenamiento a personal de SEGISPRO. Entrega de manual de
+                        usuario y documentación técnica.</p>
                     <div class="phase-deliverable">
                         <strong>Entregable:</strong> Plataforma en producción + Capacitación completa
                     </div>
@@ -949,23 +1070,76 @@
             <p class="section-subtitle">Tecnologías modernas y confiables</p>
         </div>
 
-        <div class="tech-grid">
-            <div class="tech-item">Next.js</div>
-            <div class="tech-item">Node.js</div>
-            <div class="tech-item">PostgreSQL</div>
-            <div class="tech-item">Prisma ORM</div>
-            <div class="tech-item">Azure AI</div>
-            <div class="tech-item">Puppeteer</div>
-            <div class="tech-item">Google API</div>
-            <div class="tech-item">Outlook API</div>
-            <div class="tech-item">WhatsApp API</div>
-            <div class="tech-item">Vercel</div>
+        <div class="tech-grid"
+            style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px,1fr));gap:20px;text-align:center;">
+
+            <!-- Next.js -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:nextjs-icon" style="font-size:40px;"></span>
+                <div>Next.js</div>
+            </div>
+
+            <!-- Node.js -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:nodejs-icon" style="font-size:40px;"></span>
+                <div>Node.js</div>
+            </div>
+
+            <!-- PostgreSQL -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:postgresql" style="font-size:40px;"></span>
+                <div>PostgreSQL</div>
+            </div>
+
+            <!-- Prisma ORM -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:prisma" style="font-size:40px;"></span>
+                <div>Prisma ORM</div>
+            </div>
+
+            <!-- Azure AI -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:microsoft-azure" style="font-size:40px;"></span>
+                <div>Azure AI</div>
+            </div>
+
+            <!-- Puppeteer (no oficial, usamos Chromium/Chrome) -->
+            <div class="tech-item">
+                <img src="puppeteer.png" width="30" alt="Puppeteer Icon">
+                <div>Puppeteer</div>
+            </div>
+
+            <!-- Google API -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:google-icon" style="font-size:40px;"></span>
+                <div>Google API</div>
+            </div>
+
+            <!-- Outlook API (usamos Microsoft/Outlook genérico) -->
+            <div class="tech-item">
+                <img src="data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOm5vbmU7fS5jbHMtMntmaWxsOiMwMzY0Yjg7fS5jbHMtMywuY2xzLTh7ZmlsbDojMGEyNzY3O30uY2xzLTR7ZmlsbDojMjhhOGVhO30uY2xzLTV7ZmlsbDojMzViOGYxO30uY2xzLTZ7ZmlsbDojNTBkOWZmO30uY2xzLTd7ZmlsbDojMDA3OGQ0O30uY2xzLTExLC5jbHMtOHtvcGFjaXR5OjAuNTt9LmNscy05e2ZpbGw6IzE0OTBkZjt9LmNscy0xMHtvcGFjaXR5OjAuMTt9LmNscy0xMntmaWxsOiNmZmY7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5PdXRsb29rXzI0eDwvdGl0bGU+PGcgaWQ9Ik91dGxvb2siPjxnIGlkPSJfMjQiIGRhdGEtbmFtZT0iMjQiPjxyZWN0IGNsYXNzPSJjbHMtMSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMjEsMUg4QTEsMSwwLDAsMCw3LDJWM2w4LDIuNDVMMjIsM1YyQTEsMSwwLDAsMCwyMSwxWiIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTI0LDExLjkyYS41NC41NCwwLDAsMC0uMjYtLjQ2aDBMMTUuMTMsNi41NkEuNDEuNDEsMCwwLDAsMTUsNi40OWExLjIzLDEuMjMsMCwwLDAtMS4wNiwwaDBhLjQxLjQxLDAsMCwwLS4xMS4wN0w1LjI4LDExLjQzaDBhLjUzLjUzLDAsMCwwLDAsLjkxaDBsOC41OSw0LjkzLjExLjA2aDBhMS4xNSwxLjE1LDAsMCwwLDEuMDYsMGwuMTEtLjA2LDguNTktNC45aDBBLjUzLjUzLDAsMCwwLDI0LDExLjkyWiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtNCIgcG9pbnRzPSIxNSAzIDcgMyA3IDEwIDE1IDE4IDIyIDE4IDIyIDEwIDE1IDMiLz48cG9seWxpbmUgY2xhc3M9ImNscy01IiBwb2ludHM9IjIzLjU2IDIyLjgyIDUuMjkgMTIuMzcgNS4yOCAxMi4zNyIvPjxyZWN0IGNsYXNzPSJjbHMtNiIgeD0iMTUiIHk9IjMiIHdpZHRoPSI3IiBoZWlnaHQ9IjciLz48cmVjdCBjbGFzcz0iY2xzLTciIHg9IjciIHk9IjEwIiB3aWR0aD0iOCIgaGVpZ2h0PSIxMCIvPjxwYXRoIGNsYXNzPSJjbHMtOCIgZD0iTTE0LjUsMTkuNSw1LjI5LDEyLjM1bC40OS0uODYsOC42MSw0Ljk0YS4zNC4zNCwwLDAsMCwuMjQsMGw4LjUtNC44NS41Ljg3WiIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtOSIgcG9pbnRzPSIxMy44NSAxNy4yNyAxMy44OCAxNy4yOCAxMy44NSAxNy4yNyAxMy44NSAxNy4yNyIvPjxwYXRoIGNsYXNzPSJjbHMtOSIgZD0iTTIzLjc0LDEyLjM2aDBMMTUuMiwxNy4yNWwtLjE3LjA4YTEuMjMsMS4yMywwLDAsMS0uNTQuMTMsMS4xNSwxLjE1LDAsMCwxLS41My0uMTNsMi43NywzLjg1LDYuODMsMS42M0ExLDEsMCwwLDAsMjQsMjJWMTEuOUEuNTYuNTYsMCwwLDEsMjMuNzQsMTIuMzZaIi8+PHBhdGggY2xhc3M9ImNscy0xMCIgZD0iTTI0LDIydi0uMDdsLTguNS00Ljg1LS4zLjE4LS4xNy4wOWExLjMzLDEuMzMsMCwwLDEtLjUzLjEyaC0uMDdhMS4yNCwxLjI0LDAsMCwxLS40My0uMTF2MEwxOCwyMWw1LjU2LDEuODFBMSwxLDAsMCwwLDI0LDIyWiIvPjxwYXRoIGNsYXNzPSJjbHMtNCIgZD0iTTEzLjg1LDE3LjI3LDcsMTMuMTlIN2wtMS43NC0uODNoMEEuNTMuNTMsMCwwLDEsNSwxMS45VjIyYTEsMSwwLDAsMCwxLDFIMjIuOGExLjE2LDEuMTYsMCwwLDAsLjc2LS4xOVoiLz48cGF0aCBjbGFzcz0iY2xzLTExIiBkPSJNMTMuNiwyMEExLjUsMS41LDAsMCwwLDE1LDE4LjY1VjcuMTdBMS4xOCwxLjE4LDAsMCwwLDEzLjgzLDZIN3Y0LjQ3bC0xLjc0LDFoMGEuNDcuNDcsMCwwLDAtLjI2LjQyczAsMCwwLDBINVYyMFoiLz48cmVjdCBpZD0iQmFja19QbGF0ZSIgZGF0YS1uYW1lPSJCYWNrIFBsYXRlIiBjbGFzcz0iY2xzLTciIHk9IjUiIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgcng9IjEuMTciLz48cGF0aCBjbGFzcz0iY2xzLTEyIiBkPSJNMy40Niw5LjgzQTMuNTksMy41OSwwLDAsMSw0Ljg3LDguMjgsNC4yNyw0LjI3LDAsMCwxLDcuMSw3LjcyYTQsNCwwLDAsMSwyLjA3LjUzLDMuNjIsMy42MiwwLDAsMSwxLjM3LDEuNDhBNSw1LDAsMCwxLDExLDExLjkyYTUsNSwwLDAsMS0uNDksMi4yOCwzLjYsMy42LDAsMCwxLTEuNDEsMS41M0E0LDQsMCwwLDEsNywxNi4yOGE0LDQsMCwwLDEtMi4xMS0uNTQsMy41NSwzLjU1LDAsMCwxLTEuMzktMS40OEE0LjczLDQuNzMsMCwwLDEsMywxMi4xLDUuMTUsNS4xNSwwLDAsMSwzLjQ2LDkuODNaTTUsMTMuNDhhMi4zMSwyLjMxLDAsMCwwLC43OSwxQTIuMDcsMi4wNywwLDAsMCw3LDE0Ljg3YTIuMTYsMi4xNiwwLDAsMCwxLjMxLS4zOCwyLjIyLDIuMjIsMCwwLDAsLjc3LTFBMy43OCwzLjc4LDAsMCwwLDkuMzIsMTJhNC40NSw0LjQ1LDAsMCwwLS4yMy0xLjQ1LDIuMzIsMi4zMiwwLDAsMC0uNzUtMS4wNkEyLDIsMCwwLDAsNyw5LjEzYTIuMTYsMi4xNiwwLDAsMC0xLjI3LjM3LDIuMzYsMi4zNiwwLDAsMC0uOCwxQTMuNjksMy42OSwwLDAsMCw0LjY5LDEyLDMuODEsMy44MSwwLDAsMCw1LDEzLjQ4WiIvPjwvZz48L2c+PC9zdmc+"
+                    width="40" alt="Outlook Icon">
+                <div>Outlook API</div>
+            </div>
+
+            <!-- WhatsApp API -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:whatsapp-icon" style="font-size:40px;"></span>
+                <div>WhatsApp API</div>
+            </div>
+
+            <!-- Vercel -->
+            <div class="tech-item">
+                <span class="iconify" data-icon="logos:vercel-icon" style="font-size:40px;"></span>
+                <div>Vercel</div>
+            </div>
+
         </div>
     </div>
 
     <div class="budget-section">
         <div class="container" style="padding: 0;">
-            <div class="budget-amount">$10.000.000</div>
+            <div class="budget-amount">$10000000</div>
             <p class="budget-desc">Inversión Total - Desarrollo Completo en 3 Meses</p>
 
             <div class="payment-cards">
@@ -989,12 +1163,6 @@
     </div>
 
     <div class="container">
-        <div class="roi-card">
-            <h3 style="font-size: 1.8rem; margin-bottom: 10px;">Retorno de Inversión</h3>
-            <div class="roi-number">500-1000%</div>
-            <p class="roi-label">Recuperación en el primer año</p>
-        </div>
-
         <div class="section-header">
             <h2 class="section-title">Beneficios Clave</h2>
         </div>
@@ -1018,19 +1186,116 @@
             <div class="contact-grid">
                 <div class="contact-item">
                     <div class="contact-icon">📧</div>
-                    <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a>
+                    <a href="mailto:1227jldev@gmail.com">1227jldev@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">📱</div>
-                    <a href="tel:+573001234567">+57 300 123 4567</a>
+                    <a href="https://wa.me/573137962847">+57 313 796 2847</a>
                 </div>
                 <div class="contact-item">
                     <div class="contact-icon">💻</div>
-                    <a href="https://github.com/tu-usuario" target="_blank">github.com/tu-usuario</a>
+                    <a href="https://github.com/jldev1227" target="_blank">github.com/jldev1227</a>
                 </div>
             </div>
         </div>
         <p class="footer-copyright">© 2025 - Propuesta de Desarrollo SEGISPRO</p>
     </footer>
+
+    <script>
+        // Inicializar AOS
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 100
+        });
+
+        // Efectos de scroll adicionales
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.parallax-bg');
+            const speed = scrolled * 0.5;
+
+            if (parallax) {
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Animación de números contador
+        const observerOptions = {
+            threshold: 0.7
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const number = target.querySelector('.stat-number, .budget-amount, .payment-percent');
+                    if (number && !number.classList.contains('animated')) {
+                        animateNumber(number);
+                        number.classList.add('animated');
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observar elementos con números
+        document.querySelectorAll('.stat-card, .payment-card, .budget-section').forEach(el => {
+            observer.observe(el);
+        });
+
+        function animateNumber(element) {
+            const text = element.textContent;
+            const originalText = text;
+
+            // Detectar si es un número con formato de moneda colombiana
+            if (text.includes('$') && text.length > 8) {
+                // Para números grandes como $10.000.000
+                const number = parseInt(text.replace(/[^0-9]/g, ''));
+                if (isNaN(number)) return;
+
+                let current = 0;
+                const increment = number / 60;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= number) {
+                        current = number;
+                        clearInterval(timer);
+                        element.textContent = '$' + number.toLocaleString('es-CO');
+                    } else {
+                        element.textContent = '$' + Math.floor(current).toLocaleString('es-CO');
+                    }
+                }, 25);
+                return;
+            }
+
+            // Para otros números (porcentajes, números simples)
+            const number = parseFloat(text.replace(/[^0-9.-]/g, ''));
+            const suffix = text.replace(/[0-9.-]/g, '');
+
+            if (isNaN(number)) return;
+
+            let current = 0;
+            const increment = number / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= number) {
+                    current = number;
+                    clearInterval(timer);
+                }
+
+                // Mantener formato original para porcentajes y otros
+                if (suffix.includes('%')) {
+                    element.textContent = Math.floor(current) + suffix;
+                } else if (suffix.includes('$')) {
+                    element.textContent = '$' + Math.floor(current).toLocaleString('es-CO') + suffix.replace('$', '');
+                } else {
+                    element.textContent = Math.floor(current) + suffix;
+                }
+            }, 30);
+        }
+    </script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
 </body>
+
 </html>
