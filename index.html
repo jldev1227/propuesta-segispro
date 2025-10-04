@@ -12,13 +12,18 @@
         }
 
         :root {
-            --primary: #0d2399;
-            --secondary: #dc6c2c;
-            --accent: #d82e20;
-            --success: #60a832;
-            --text: #1a1a1a;
-            --text-light: #71717a;
-            --bg: #fafafa;
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent: #3b82f6;
+            --accent-dark: #1d4ed8;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --text: #0f172a;
+            --text-light: #64748b;
+            --bg: #f8fafc;
+            --glass: rgba(255, 255, 255, 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-tech: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #3b82f6 100%);
         }
 
         body {
@@ -30,8 +35,8 @@
         }
 
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
-            min-height: 85vh;
+            background: var(--gradient-tech);
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,12 +47,20 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
         }
 
         .hero-content {
@@ -78,11 +91,16 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
+            font-size: 4.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #3b82f6 50%, #10b981 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+            line-height: 1.1;
+            text-shadow: 0 0 40px rgba(59, 130, 246, 0.3);
         }
 
         .hero .subtitle {
@@ -95,14 +113,23 @@
         .badge {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            padding: 12px 24px;
+            gap: 12px;
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            padding: 16px 32px;
             border-radius: 50px;
             color: white;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            font-weight: 500;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.3);
         }
 
         .container {
@@ -117,10 +144,14 @@
         }
 
         .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 12px;
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
         .section-subtitle {
@@ -138,29 +169,65 @@
         }
 
         .stat-card {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(20px);
+            padding: 50px 40px;
+            border-radius: 28px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.6s ease;
         }
 
         .stat-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(13, 35, 153, 0.15);
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 
+                0 20px 60px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+        
+        .stat-card:hover::before {
+            left: 100%;
         }
 
-        .stat-card:nth-child(1) { border-top: 3px solid var(--primary); }
-        .stat-card:nth-child(2) { border-top: 3px solid var(--secondary); }
-        .stat-card:nth-child(3) { border-top: 3px solid var(--success); }
+        .stat-card:nth-child(1) { 
+            border-top: 4px solid var(--accent); 
+            box-shadow: 0 8px 32px rgba(59, 130, 246, 0.1);
+        }
+        .stat-card:nth-child(2) { 
+            border-top: 4px solid var(--warning); 
+            box-shadow: 0 8px 32px rgba(245, 158, 11, 0.1);
+        }
+        .stat-card:nth-child(3) { 
+            border-top: 4px solid var(--success); 
+            box-shadow: 0 8px 32px rgba(16, 185, 129, 0.1);
+        }
 
         .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--primary);
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            letter-spacing: -2px;
+            line-height: 1;
         }
 
         .stat-label {
@@ -175,17 +242,39 @@
         }
 
         .feature-card {
-            background: white;
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(20px);
+            padding: 40px 35px;
+            border-radius: 24px;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            transition: left 0.6s ease;
         }
 
         .feature-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 16px 48px rgba(59, 130, 246, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+        
+        .feature-card:hover::before {
+            left: 100%;
         }
 
         .feature-icon {
@@ -206,42 +295,74 @@
         }
 
         .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 32px;
             margin-top: 60px;
         }
 
         .phase {
-            background: white;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+            backdrop-filter: blur(20px);
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            transition: all 0.3s ease;
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            margin-bottom: 24px;
         }
 
         .phase:hover {
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 
+                0 20px 60px rgba(59, 130, 246, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
         }
 
         .phase-content {
-            padding: 45px;
+            padding: 40px 45px;
+            width: 100%;
         }
 
         .phase-number {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            box-shadow: 
+                0 8px 24px rgba(59, 130, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .phase-number::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(135deg, var(--accent), var(--success));
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.3;
+            animation: pulse-ring 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.1; }
+            100% { transform: scale(1); opacity: 0.3; }
         }
 
         .phase h3 {
@@ -269,20 +390,6 @@
             color: var(--success);
         }
 
-        .phase-image {
-            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            overflow: hidden;
-        }
-
-        .phase-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
 
         .tech-grid {
             display: grid;
@@ -310,24 +417,35 @@
         }
 
         .budget-section {
-            background: linear-gradient(135deg, var(--primary) 0%, #1e3a8a 100%);
-            border-radius: 32px;
-            padding: 80px 60px;
+            background: var(--gradient-tech);
+            border-radius: 40px;
+            padding: 100px 60px;
             color: white;
-            margin: 100px 0;
+            margin: 120px 0;
             position: relative;
             overflow: hidden;
+            box-shadow: 
+                0 20px 60px rgba(15, 23, 42, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
 
         .budget-section::before {
             content: '';
             position: absolute;
-            top: -100px;
-            right: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 70% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            33% { transform: translateY(-10px) rotate(1deg); }
+            66% { transform: translateY(5px) rotate(-1deg); }
         }
 
         .budget-amount {
@@ -533,13 +651,10 @@
                 font-size: 2rem;
             }
 
-            .phase {
+            .timeline {
                 grid-template-columns: 1fr;
             }
 
-            .phase-image {
-                min-height: 300px;
-            }
 
             .budget-section {
                 padding: 50px 30px;
@@ -570,8 +685,8 @@
 
         .fade-up {
             opacity: 0;
-            transform: translateY(30px);
-            animation: fadeUp 0.8s ease forwards;
+            transform: translateY(50px);
+            animation: fadeUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
         @keyframes fadeUp {
@@ -581,19 +696,55 @@
             }
         }
 
-        .delay-1 { animation-delay: 0.1s; }
-        .delay-2 { animation-delay: 0.2s; }
-        .delay-3 { animation-delay: 0.3s; }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        .parallax-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(245, 158, 11, 0.02) 0%, transparent 50%);
+            z-index: -1;
+            animation: parallax 20s linear infinite;
+        }
+        
+        @keyframes parallax {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-50px); }
+        }
+        
+        .tech-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(59, 130, 246, 0.6);
+            border-radius: 50%;
+            animation: float-particle 8s linear infinite;
+        }
+        
+        @keyframes float-particle {
+            0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
+        }
     </style>
 </head>
 <body>
+    <div class="parallax-bg"></div>
     <div class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="fade-up">Plataforma Inteligente SEGISPRO</h1>
-                <p class="subtitle fade-up delay-1">Automatización completa para gestión de órdenes ARL</p>
+                <h1 class="fade-up">Plataforma Inteligente<br><span style="color: #3b82f6;">SEGISPRO</span></h1>
+                <p class="subtitle fade-up delay-1">Automatización completa para gestión de órdenes ARL con IA</p>
                 <div class="badge fade-up delay-2">
-                    <span>👨‍💻</span>
+                    <span style="font-size: 1.2rem;">🤖</span>
                     <span>Julián López - Tecnólogo ADS</span>
                 </div>
             </div>
@@ -605,113 +756,189 @@
 
     <div class="container">
         <div class="section-header">
-            <h2 class="section-title">El Proyecto en Números</h2>
-            <p class="section-subtitle">Una solución completa en 3 meses con retorno garantizado</p>
-        </div>
-
-        <div class="stats">
-            <div class="stat-card">
-                <span class="stat-number">3</span>
-                <span class="stat-label">Meses de Desarrollo</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">$10M</span>
-                <span class="stat-label">Inversión Total COP</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">500-1000%</span>
-                <span class="stat-label">ROI Esperado</span>
-            </div>
-        </div>
-
-        <div class="section-header" style="margin-top: 120px;">
             <h2 class="section-title">Funcionalidades Principales</h2>
             <p class="section-subtitle">Todo lo que necesitas para automatizar tu operación ARL</p>
         </div>
 
         <div class="features">
-            <div class="feature-card">
+            <div class="feature-card fade-up">
                 <div class="feature-icon">🤖</div>
-                <h3>BOT Inteligente</h3>
-                <p>Extracción automática de órdenes desde portales ARL</p>
+                <h3>BOT Inteligente AI</h3>
+                <p>Extracción automática de órdenes desde portales ARL con inteligencia artificial</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card fade-up delay-1">
                 <div class="feature-icon">📄</div>
                 <h3>OCR con Azure</h3>
-                <p>Digitalización instantánea de documentos</p>
+                <p>Digitalización instantánea y procesamiento inteligente de documentos</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card fade-up delay-2">
                 <div class="feature-icon">📅</div>
                 <h3>Calendarios Sync</h3>
-                <p>Integración con Google Calendar y Outlook</p>
+                <p>Integración completa con Google Calendar y Outlook</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card fade-up">
                 <div class="feature-icon">🔔</div>
-                <h3>Notificaciones</h3>
-                <p>Alertas automáticas por WhatsApp y email</p>
+                <h3>Notificaciones Smart</h3>
+                <p>Alertas automáticas inteligentes por WhatsApp y email</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card fade-up delay-1">
                 <div class="feature-icon">👥</div>
                 <h3>Gestión de Equipo</h3>
-                <p>Control de profesionales y asignaciones</p>
+                <p>Control inteligente de profesionales y asignaciones automáticas</p>
             </div>
-            <div class="feature-card">
+            <div class="feature-card fade-up delay-2">
                 <div class="feature-icon">📊</div>
-                <h3>Reportes Auto</h3>
-                <p>Generación de Excel/PDF con métricas</p>
+                <h3>Analytics & Reportes</h3>
+                <p>Generación automática de Excel/PDF con métricas avanzadas</p>
             </div>
         </div>
 
         <div class="section-header" style="margin-top: 120px;">
             <h2 class="section-title">Cronograma de Desarrollo</h2>
-            <p class="section-subtitle">Tres fases estratégicas para una implementación exitosa</p>
+            <p class="section-subtitle">12 semanas de desarrollo estructurado y entrega incremental</p>
         </div>
 
         <div class="timeline">
-            <div class="phase">
+            <div class="phase fade-up">
                 <div class="phase-content">
                     <div class="phase-number">1</div>
-                    <h3>Diseño y Estructura</h3>
-                    <p class="phase-duration">Semanas 1-4</p>
-                    <p>Arquitectura de software, modelado de base de datos y configuración del entorno completo con Next.js, PostgreSQL y Azure.</p>
+                    <h3>Análisis de Requerimientos</h3>
+                    <p class="phase-duration">Semana 1</p>
+                    <p>Reunión con gerencia y equipo de EGISPRO. Levantamiento de procesos actuales y flujos con las ARL. Definición de roles de usuario (admin, profesional, cliente). Documentación inicial de alcance.</p>
                     <div class="phase-deliverable">
-                        <strong>Entregable:</strong> Arquitectura documentada + Entorno configurado + Modelo de datos
+                        <strong>Entregable:</strong> Documento de requerimientos y alcance del proyecto
                     </div>
-                </div>
-                <div class="phase-image">
-                    <img src="ChatGPT Image Oct 4, 2025, 02_56_47 PM.png" alt="Fase 1: Diseño y Estructura">
                 </div>
             </div>
 
-            <div class="phase">
-                <div class="phase-image">
-                    <img src="ChatGPT Image Oct 4, 2025, 02_59_17 PM.png" alt="Fase 2: BOT AI + OCR">
-                </div>
+            <div class="phase fade-up delay-1">
                 <div class="phase-content">
                     <div class="phase-number">2</div>
-                    <h3>BOT AI + OCR</h3>
-                    <p class="phase-duration">Semanas 5-8</p>
-                    <p>Desarrollo del backend, creación del BOT con Puppeteer, integración de OCR con Azure y sistema de notificaciones automáticas.</p>
+                    <h3>Diseño de Arquitectura</h3>
+                    <p class="phase-duration">Semana 2</p>
+                    <p>Diagramas de arquitectura (frontend, backend, base de datos, integraciones externas). Selección de stack definitivo (Next.js, Node, Prisma, PostgreSQL, Azure). Configuración de repositorios y entorno de desarrollo.</p>
                     <div class="phase-deliverable">
-                        <strong>Entregable:</strong> BOT funcional + OCR integrado + Notificaciones activas
+                        <strong>Entregable:</strong> Arquitectura documentada y entorno configurado
                     </div>
                 </div>
             </div>
 
-            <div class="phase">
+            <div class="phase fade-up delay-2">
                 <div class="phase-content">
                     <div class="phase-number">3</div>
-                    <h3>Integración Final</h3>
-                    <p class="phase-duration">Semanas 9-12</p>
-                    <p>Módulo de profesionales, reportes automáticos, capacitación del equipo y despliegue en producción con pruebas finales.</p>
+                    <h3>Modelado de Base de Datos</h3>
+                    <p class="phase-duration">Semana 3</p>
+                    <p>Diseño de entidades (Órdenes, Profesionales, Clientes, Actividades, Documentos). Creación de esquema inicial con Prisma + PostgreSQL. Migraciones iniciales y validación de relaciones.</p>
                     <div class="phase-deliverable">
-                        <strong>Entregable:</strong> Plataforma completa + Capacitación + Documentación
+                        <strong>Entregable:</strong> Base de datos modelada y configurada
                     </div>
                 </div>
-                <div class="phase-image">
-                    <div style="text-align: center; padding: 40px;">
-                        <div style="font-size: 4rem; margin-bottom: 10px;">🚀</div>
-                        <div style="color: var(--text-light);">Espacio para imagen<br />de la plataforma final</div>
+            </div>
+
+            <div class="phase fade-up">
+                <div class="phase-content">
+                    <div class="phase-number">4</div>
+                    <h3>Mockups y UX/UI</h3>
+                    <p class="phase-duration">Semana 4</p>
+                    <p>Diseño de pantallas principales: dashboard, órdenes, calendario. Prototipo visual en Figma o similar. Validación de interfaz con gerencia.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Diseños UI/UX aprobados y sistema de diseño
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-1">
+                <div class="phase-content">
+                    <div class="phase-number">5</div>
+                    <h3>Backend Inicial</h3>
+                    <p class="phase-duration">Semana 5</p>
+                    <p>Configuración de API GraphQL/REST. Endpoints base para Órdenes y Profesionales. Autenticación JWT y roles.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> API base funcional con autenticación
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-2">
+                <div class="phase-content">
+                    <div class="phase-number">6</div>
+                    <h3>BOT AI (Scraping ARL)</h3>
+                    <p class="phase-duration">Semana 6</p>
+                    <p>Desarrollo del bot (Puppeteer/Playwright). Automatización de login y consulta de órdenes. Registro automático en la base de datos.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> BOT inteligente funcional y monitoreado
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up">
+                <div class="phase-content">
+                    <div class="phase-number">7</div>
+                    <h3>OCR y Documentos</h3>
+                    <p class="phase-duration">Semana 7</p>
+                    <p>Integración de Azure Cognitive Services (OCR). Extracción de datos de documentos de soporte. Validación de estructura de archivos y almacenamiento en Azure.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Sistema OCR integrado con Azure
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-1">
+                <div class="phase-content">
+                    <div class="phase-number">8</div>
+                    <h3>Notificaciones</h3>
+                    <p class="phase-duration">Semana 8</p>
+                    <p>Integración con Outlook SMTP para correos. Integración con API de WhatsApp Business. Sistema de recordatorios automáticos.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Sistema de notificaciones completo
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-2">
+                <div class="phase-content">
+                    <div class="phase-number">9</div>
+                    <h3>Calendario y Profesionales</h3>
+                    <p class="phase-duration">Semana 9</p>
+                    <p>Integración con Google/Outlook Calendar API. Módulo de agenda de profesionales. Vista mensual con actividades programadas.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Módulo de profesionales y calendarios integrados
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up">
+                <div class="phase-content">
+                    <div class="phase-number">10</div>
+                    <h3>Dashboard y Reportes</h3>
+                    <p class="phase-duration">Semana 10</p>
+                    <p>Dashboard central con métricas de estado de servicios. Exportación de reportes en PDF y Excel. Gráficas con estadísticas de pérdidas/ahorros.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Dashboard completo y sistema de reportes
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-1">
+                <div class="phase-content">
+                    <div class="phase-number">11</div>
+                    <h3>Pruebas y QA</h3>
+                    <p class="phase-duration">Semana 11</p>
+                    <p>Pruebas unitarias y de integración. Ajustes de seguridad (tokens, permisos). Corrección de bugs.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Sistema probado y auditado
+                    </div>
+                </div>
+            </div>
+
+            <div class="phase fade-up delay-2">
+                <div class="phase-content">
+                    <div class="phase-number">12</div>
+                    <h3>Despliegue y Capacitación</h3>
+                    <p class="phase-duration">Semana 12</p>
+                    <p>Deploy final en Vercel + Azure. Entrenamiento a personal de EGISPRO. Entrega de manual de usuario y documentación técnica.</p>
+                    <div class="phase-deliverable">
+                        <strong>Entregable:</strong> Plataforma en producción + Capacitación completa
                     </div>
                 </div>
             </div>
