@@ -37,6 +37,10 @@
             overflow-x: hidden;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         .hero {
             background: var(--gradient-tech);
             min-height: 100vh;
@@ -144,6 +148,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 100px 40px;
+            overflow-x: hidden;
         }
 
         .section-header {
@@ -309,6 +314,7 @@
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 32px;
             margin-top: 60px;
+            overflow-x: hidden;
         }
 
         .phase {
@@ -712,6 +718,14 @@
             font-size: 0.9rem;
         }
 
+        @media (max-width: 1280px) {
+            .features {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 24px;
+            }
+        }
+
         @media (max-width: 968px) {
             .hero-content {
                 flex-direction: column;
@@ -734,13 +748,21 @@
 
             .features {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                 gap: 24px;
             }
 
-
             .timeline {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .phase {
+                margin-bottom: 16px;
+            }
+
+            .phase-content {
+                padding: 30px 25px;
             }
 
             .budget-section {
@@ -855,7 +877,7 @@
     <div class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1 class="fade-up">Propuesta Inteligente<br><span style="color: #3b82f6;">SEGISPRO</span></h1>
+                <h1 class="fade-up">Propuesta<br><span style="color: #3b82f6;">SEGISPRO</span></h1>
                 <p class="subtitle fade-up delay-1">Automatización completa para gestión de órdenes ARL con IA</p>
                 <div class="badge fade-up delay-2">
                     <span style="font-size: 1.2rem;">🤖</span>
@@ -913,7 +935,7 @@
         </div>
 
         <div class="timeline">
-            <div class="phase" data-aos="slide-right">
+            <div class="phase" data-aos="fade-up" data-aos-delay="100">
                 <div class="phase-content">
                     <div class="phase-number">1</div>
                     <h3>Análisis de Requerimientos</h3>
@@ -927,7 +949,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-left">
+            <div class="phase" data-aos="fade-up" data-aos-delay="150">
                 <div class="phase-content">
                     <div class="phase-number">2</div>
                     <h3>Diseño de Arquitectura</h3>
@@ -941,7 +963,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="fade-up">
+            <div class="phase" data-aos="fade-up" data-aos-delay="200">
                 <div class="phase-content">
                     <div class="phase-number">3</div>
                     <h3>Modelado de Base de Datos</h3>
@@ -954,7 +976,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-right">
+            <div class="phase" data-aos="fade-up" data-aos-delay="100">
                 <div class="phase-content">
                     <div class="phase-number">4</div>
                     <h3>Mockups y UX/UI</h3>
@@ -967,7 +989,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-left">
+            <div class="phase" data-aos="fade-up" data-aos-delay="150">
                 <div class="phase-content">
                     <div class="phase-number">5</div>
                     <h3>Backend Inicial</h3>
@@ -980,7 +1002,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="fade-up">
+            <div class="phase" data-aos="fade-up" data-aos-delay="200">
                 <div class="phase-content">
                     <div class="phase-number">6</div>
                     <h3>BOT AI (Scraping ARL)</h3>
@@ -993,7 +1015,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-right">
+            <div class="phase" data-aos="fade-up" data-aos-delay="100">
                 <div class="phase-content">
                     <div class="phase-number">7</div>
                     <h3>OCR y Documentos</h3>
@@ -1006,7 +1028,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-left">
+            <div class="phase" data-aos="fade-up" data-aos-delay="150">
                 <div class="phase-content">
                     <div class="phase-number">8</div>
                     <h3>Notificaciones</h3>
@@ -1019,7 +1041,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="fade-up">
+            <div class="phase" data-aos="fade-up" data-aos-delay="200">
                 <div class="phase-content">
                     <div class="phase-number">9</div>
                     <h3>Calendario y Profesionales</h3>
@@ -1032,7 +1054,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-right">
+            <div class="phase" data-aos="fade-up" data-aos-delay="100">
                 <div class="phase-content">
                     <div class="phase-number">10</div>
                     <h3>Dashboard y Reportes</h3>
@@ -1045,7 +1067,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="slide-left">
+            <div class="phase" data-aos="fade-up" data-aos-delay="150">
                 <div class="phase-content">
                     <div class="phase-number">11</div>
                     <h3>Pruebas y QA</h3>
@@ -1058,7 +1080,7 @@
                 </div>
             </div>
 
-            <div class="phase" data-aos="fade-up">
+            <div class="phase" data-aos="fade-up" data-aos-delay="200">
                 <div class="phase-content">
                     <div class="phase-number">12</div>
                     <h3>Despliegue y Capacitación</h3>
@@ -1209,12 +1231,16 @@
     </footer>
 
     <script>
-        // Inicializar AOS
+        // Inicializar AOS con configuración responsive
         AOS.init({
             duration: 1000,
             easing: 'ease-out-cubic',
             once: true,
-            offset: 100
+            offset: 100,
+            disable: function () {
+                var maxWidth = 768;
+                return window.innerWidth < maxWidth;
+            }
         });
 
         // Efectos de scroll adicionales
