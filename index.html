@@ -157,6 +157,17 @@
 
 <body>
     <div id="fullpage">
+        <!-- Loader pantalla completa -->
+        <div id="loaderScreen" style="
+    position:fixed; inset:0; z-index:99999; background:linear-gradient(135deg,#1e293b 60%,#3b82f6 100%);
+    display:flex; align-items:center; justify-content:center; transition:opacity 0.7s;
+">
+            <div class="flex flex-col items-center">
+                <div class="animate-spin rounded-full border-8 border-blue-400 border-t-transparent w-20 h-20 mb-6">
+                </div>
+                <div class="text-2xl font-bold text-white tracking-wide">Cargando...</div>
+            </div>
+        </div>
 
         <!-- SECCIÓN 1: Hero -->
         <div class="section max-lg:py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-500">
@@ -777,7 +788,8 @@
                     </p>
 
                     <p class="text-sm md:text-base text-slate-700 mb-8 fade-in">
-                        Haz clic en cada tecnología para ver una breve descripción y el objetivo que cumple dentro de la plataforma.
+                        Haz clic en cada tecnología para ver una breve descripción y el objetivo que cumple dentro de la
+                        plataforma.
                     </p>
 
                     <div class="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8 max-w-5xl mx-auto">
@@ -886,8 +898,12 @@
                         Completo en 3 Meses</p>
 
                     <div class="mb-8 fade-in text-base md:text-lg text-white/80">
-                        <span class="font-semibold">Nota:</span> El valor presentado es negociable y puede ajustarse según las necesidades específicas del proyecto o acuerdos entre las partes.<br>
-                        <span class="font-semibold">Importante:</span> Este valor no incluye licencias ni consumo de recursos en la nube o servicios de IA. Dichos costos serán estimados y ajustados durante la ejecución, ya que dependen del consumo real y del volumen de órdenes y actividades procesadas mensualmente.
+                        <span class="font-semibold">Nota:</span> El valor presentado es negociable y puede ajustarse
+                        según las necesidades específicas del proyecto o acuerdos entre las partes.<br>
+                        <span class="font-semibold">Importante:</span> Este valor no incluye licencias ni consumo de
+                        recursos en la nube o servicios de IA. Dichos costos serán estimados y ajustados durante la
+                        ejecución, ya que dependen del consumo real y del volumen de órdenes y actividades procesadas
+                        mensualmente.
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -1054,6 +1070,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
 
     <script>
+
+        function hideLoaderScreen() {
+            const loader = document.getElementById('loaderScreen');
+            loader.style.transition = 'opacity 0.3s';
+            loader.style.opacity = '0';
+            setTimeout(() => {
+            loader.style.display = 'none';
+            }, 700);
+        }
+
+        window.addEventListener('load', () => {
+            setTimeout(hideLoaderScreen, 300); // espera breve antes de desaparecer
+        });
+
+
         let isModalOpen = false;
         let fullpageInstance = null;
         let lastBreakpoint = null;
@@ -1159,9 +1190,9 @@
             return 'mobile';
         }
 
-        function applyFullpageIfNeeded() {
+        function applyFullpageIfNeeded(force = false) {
             const currentBreakpoint = getBreakpoint();
-            if (currentBreakpoint !== lastBreakpoint && Math.abs(window.innerWidth - (window._lastWidth || 0)) > 100) {
+            if (force || currentBreakpoint !== lastBreakpoint || Math.abs(window.innerWidth - (window._lastWidth || 0)) > 100) {
                 lastBreakpoint = currentBreakpoint;
                 window._lastWidth = window.innerWidth;
 
@@ -1215,12 +1246,14 @@
             });
             window._lastWidth = window.innerWidth;
             lastBreakpoint = getBreakpoint();
-            applyFullpageIfNeeded();
+            // Detectar el tamaño y aplicar la configuración adecuada al render inicial
+            applyFullpageIfNeeded(true);
         });
 
         window.addEventListener('resize', () => {
             applyFullpageIfNeeded();
         });
+    </script>
     </script>
 </body>
 
