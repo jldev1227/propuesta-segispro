@@ -102,6 +102,7 @@
 
         .tech-modal.active {
             display: flex;
+            padding: 15px;
         }
 
         .tech-modal-content {
@@ -158,7 +159,7 @@
     <div id="fullpage">
 
         <!-- SECCIÓN 1: Hero -->
-        <div class="section bg-gradient-to-br from-slate-900 via-slate-800 to-blue-500">
+        <div class="section max-sm:py-16 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-500">
             <div class="flex items-center justify-center h-full px-6 md:px-16">
                 <div class="absolute inset-0 pulse-bg opacity-30">
                     <div
@@ -193,11 +194,12 @@
         </div>
 
         <!-- SECCIÓN 2: Funcionalidades -->
-        <div class="section bg-gradient-to-br from-slate-50 to-slate-200">
+        <div class="section max-sm:py-16 bg-gradient-to-br from-slate-50 to-slate-200">
             <div class="flex items-center justify-center h-full px-4 md:px-16">
                 <div class="max-w-6xl w-full">
                     <div class="text-center mb-8">
-                        <h2 class="text-2xl md:text-5xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent mb-3 md:mb-5 -tracking-tight fade-in">
+                        <h2
+                            class="text-2xl md:text-5xl font-extrabold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent mb-3 md:mb-5 -tracking-tight fade-in">
                             Funcionalidades Principales
                         </h2>
                         <p class="text-sm md:text-xl text-slate-600 mb-6 md:mb-12 max-w-2xl mx-auto fade-in">
@@ -206,32 +208,38 @@
                     </div>
                     <!-- Desktop grid -->
                     <div class="hidden md:grid grid-cols-3 p-8 gap-8">
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-bounce">🤖</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">BOT Inteligente AI</h3>
                             <p class="text-sm text-slate-600">Extracción automática de órdenes desde portales ARL</p>
                         </div>
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-pulse">📄</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">OCR con Azure</h3>
                             <p class="text-sm text-slate-600">Digitalización instantánea de documentos</p>
                         </div>
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-bounce">📅</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">Calendarios Sync</h3>
                             <p class="text-sm text-slate-600">Integración con Google Calendar y Outlook</p>
                         </div>
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-pulse">🔔</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">Notificaciones Smart</h3>
                             <p class="text-sm text-slate-600">Alertas por WhatsApp y email</p>
                         </div>
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-bounce">👥</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">Gestión de Equipo</h3>
                             <p class="text-sm text-slate-600">Control de profesionales y asignaciones</p>
                         </div>
-                        <div class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-8 rounded-3xl shadow-md border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:-translate-y-2 hover:scale-105 scale-in text-center flex flex-col items-center">
                             <div class="text-5xl mb-4 animate-pulse">📊</div>
                             <h3 class="text-lg font-semibold mb-2 text-blue-700">Analytics & Reportes</h3>
                             <p class="text-sm text-slate-600">Generación de Excel/PDF automática</p>
@@ -239,32 +247,38 @@
                     </div>
                     <!-- Mobile vertical stack -->
                     <div class="md:hidden flex flex-col gap-4">
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-bounce">🤖</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">BOT Inteligente AI</h3>
                             <p class="text-xs text-slate-600">Extracción automática de órdenes desde portales ARL</p>
                         </div>
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-pulse">📄</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">OCR con Azure</h3>
                             <p class="text-xs text-slate-600">Digitalización instantánea de documentos</p>
                         </div>
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-bounce">📅</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">Calendarios Sync</h3>
                             <p class="text-xs text-slate-600">Integración con Google Calendar y Outlook</p>
                         </div>
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-pulse">🔔</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">Notificaciones Smart</h3>
                             <p class="text-xs text-slate-600">Alertas por WhatsApp y email</p>
                         </div>
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-bounce">👥</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">Gestión de Equipo</h3>
                             <p class="text-xs text-slate-600">Control de profesionales y asignaciones</p>
                         </div>
-                        <div class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
+                        <div
+                            class="bg-white/90 p-4 rounded-2xl shadow-lg border border-blue-100 hover:border-blue-500 transition-all duration-300 hover:scale-105 scale-in text-center flex-shrink-0 flex flex-col items-center">
                             <div class="text-3xl mb-2 animate-pulse">📊</div>
                             <h3 class="text-base font-semibold mb-1 text-blue-700">Analytics & Reportes</h3>
                             <p class="text-xs text-slate-600">Generación de Excel/PDF automática</p>
@@ -275,7 +289,7 @@
         </div>
 
         <!-- SECCIÓN 6: Beneficios -->
-        <div class="section bg-gradient-to-br from-slate-50 to-slate-100">
+        <div class="section max-sm:py-16 bg-gradient-to-br from-slate-50 to-slate-100">
             <div class="flex items-center justify-center h-full py-6 px-6 md:px-16">
                 <div class="max-w-5xl w-full">
                     <div class="text-center mb-8">
@@ -293,9 +307,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">🎯</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Cero pérdidas por
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Cero
+                                    pérdidas por
                                     órdenes no procesadas</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Automatización que garantiza el registro
+                                <div class="text-xs text-center md:text-sm text-slate-600">Automatización que garantiza
+                                    el registro
                                     y seguimiento de todas las órdenes.</div>
                             </div>
                         </div>
@@ -303,9 +319,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">⚡</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">70% menos tiempo en
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">70%
+                                    menos tiempo en
                                     gestión manual</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Procesos automáticos que reducen tareas
+                                <div class="text-xs text-center md:text-sm text-slate-600">Procesos automáticos que
+                                    reducen tareas
                                     repetitivas y errores humanos.</div>
                             </div>
                         </div>
@@ -313,9 +331,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">👁️</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Visibilidad total en
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">
+                                    Visibilidad total en
                                     tiempo real</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Paneles y reportes actualizados para
+                                <div class="text-xs text-center md:text-sm text-slate-600">Paneles y reportes
+                                    actualizados para
                                     tomar decisiones informadas.</div>
                             </div>
                         </div>
@@ -323,9 +343,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">🤝</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Asignación
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">
+                                    Asignación
                                     inteligente de profesionales</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Optimiza recursos y mejora la atención a
+                                <div class="text-xs text-center md:text-sm text-slate-600">Optimiza recursos y mejora la
+                                    atención a
                                     clientes.</div>
                             </div>
                         </div>
@@ -333,9 +355,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">📋</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Trazabilidad
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">
+                                    Trazabilidad
                                     completa de servicios</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Historial detallado de cada orden y
+                                <div class="text-xs text-center md:text-sm text-slate-600">Historial detallado de cada
+                                    orden y
                                     profesional involucrado.</div>
                             </div>
                         </div>
@@ -343,9 +367,11 @@
                             class="bg-white/90 p-6 md:p-8 rounded-2xl flex flex-col items-center gap-4 shadow-lg border border-white/30 transition-all hover:-translate-y-1 hover:scale-105 hover:shadow-xl text-left fade-in">
                             <div class="text-4xl md:text-5xl">📊</div>
                             <div>
-                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">Cumplimiento
+                                <div class="font-semibold text-slate-900 text-center text-base md:text-lg mb-1">
+                                    Cumplimiento
                                     automático de reportes</div>
-                                <div class="text-xs text-center md:text-sm text-slate-600">Generación y envío de reportes sin
+                                <div class="text-xs text-center md:text-sm text-slate-600">Generación y envío de
+                                    reportes sin
                                     intervención manual.</div>
                             </div>
                         </div>
@@ -355,96 +381,100 @@
         </div>
 
         <!-- SECCIÓN 3: Cronograma (VERTICAL CON SECTION) -->
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/reunion-pattern.svg')] bg-center bg-cover"></div>
 
             <div class="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 py-10">
-            <!-- Columna izquierda: Información -->
-            <div class="flex flex-col items-center md:items-start">
-                <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 1</div>
-                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Definición de requerimientos y alcance</h3>
-                <p class="text-gray-400 leading-relaxed max-w-md">
-                Reunión con el equipo de SEGISPRO para levantar información, entender los flujos con las ARL y
-                definir roles, permisos y objetivos del sistema.
-                </p>
-            </div>
-            <!-- Columna derecha: Imagen y entregable -->
-            <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
-                <div class="flex justify-center w-full">
-                    <img src="reunion.png" alt="Reunión SEGISPRO"
-                        class="rounded-2xl shadow-lg w-[350px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                <!-- Columna izquierda: Información -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 1</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-300">Definición de requerimientos y alcance</h3>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        Reunión con el equipo de SEGISPRO para levantar información, entender los flujos con las ARL y
+                        definir roles, permisos y objetivos del sistema.
+                    </p>
                 </div>
-                <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
-                <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
-                <p class="text-sm text-gray-300">
-                    Documento de requerimientos y alcance aprobado por el equipo.
-                </p>
+                <!-- Columna derecha: Imagen y entregable -->
+                <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="flex justify-center w-full">
+                        <img src="reunion.png" alt="Reunión SEGISPRO"
+                            class="rounded-2xl shadow-lg w-[350px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                    </div>
+                    <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
+                        <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
+                        <p class="text-sm text-gray-300">
+                            Documento de requerimientos y alcance aprobado por el equipo.
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
-            <div class="absolute inset-0 opacity-10 bg-[url('/assets/arquitectura-pattern.svg')] bg-center bg-cover"></div>
+            <div class="absolute inset-0 opacity-10 bg-[url('/assets/arquitectura-pattern.svg')] bg-center bg-cover">
+            </div>
 
             <div class="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 py-10">
-            <!-- Columna izquierda: Información -->
-            <div class="flex flex-col items-center md:items-start">
-                <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 2</div>
-                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Diseño de la arquitectura</h3>
-                <p class="text-gray-400 leading-relaxed max-w-md">
-                Creación de diagramas técnicos de arquitectura (frontend, backend, base de datos y APIs).
-                Configuración de entorno en Azure y repositorios.
-                </p>
-            </div>
-            <!-- Columna derecha: Imagen y entregable -->
-            <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
-                <div class="flex justify-center w-full">
-                <img src="arquitectura.png" alt="Arquitectura técnica"
-                    class="rounded-2xl shadow-lg w-[400px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                <!-- Columna izquierda: Información -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 2</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-300">Diseño de la arquitectura</h3>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        Creación de diagramas técnicos de arquitectura (frontend, backend, base de datos y APIs).
+                        Configuración de entorno en Azure y repositorios.
+                    </p>
                 </div>
-                <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
-                <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
-                <p class="text-sm text-gray-300">
-                    Diagramas de arquitectura aprobados y entorno de desarrollo configurado en Azure.
-                </p>
+                <!-- Columna derecha: Imagen y entregable -->
+                <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="flex justify-center w-full">
+                        <img src="arquitectura.png" alt="Arquitectura técnica"
+                            class="rounded-2xl shadow-lg w-[400px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                    </div>
+                    <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
+                        <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
+                        <p class="text-sm text-gray-300">
+                            Diagramas de arquitectura aprobados y entorno de desarrollo configurado en Azure.
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/database-pattern.svg')] bg-center bg-cover"></div>
 
             <div class="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 py-10">
-            <!-- Columna izquierda: Información -->
-            <div class="flex flex-col items-center md:items-start">
-                <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 3</div>
-                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Modelado de base de datos</h3>
-                <p class="text-gray-400 leading-relaxed max-w-md">
-                Diseño del modelo relacional con <span class="font-bold text-blue-300">Prisma</span> y <span class="font-bold text-blue-300">PostgreSQL</span>. Creación de migraciones y validación de relaciones entre órdenes, clientes y profesionales.
-                </p>
-            </div>
-            <!-- Columna derecha: Imagen y entregable -->
-            <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
-                <div class="flex justify-center w-full">
-                <img src="database.png" alt="Modelado de base de datos"
-                    class="rounded-2xl shadow-lg w-[350px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                <!-- Columna izquierda: Información -->
+                <div class="flex flex-col items-center md:items-start">
+                    <div class="text-4xl font-extrabold text-blue-400 mb-2">Semana 3</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-gray-300">Modelado de base de datos</h3>
+                    <p class="text-gray-400 leading-relaxed max-w-md">
+                        Diseño del modelo relacional con <span class="font-bold text-blue-300">Prisma</span> y <span
+                            class="font-bold text-blue-300">PostgreSQL</span>. Creación de migraciones y validación de
+                        relaciones entre órdenes, clientes y profesionales.
+                    </p>
                 </div>
-                <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
-                <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
-                <p class="text-sm text-gray-300">
-                    Modelo de base de datos aprobado, migraciones creadas y relaciones validadas entre entidades principales.
-                </p>
+                <!-- Columna derecha: Imagen y entregable -->
+                <div class="flex flex-col items-center md:items-start mt-8 md:mt-0">
+                    <div class="flex justify-center w-full">
+                        <img src="database.png" alt="Modelado de base de datos"
+                            class="rounded-2xl shadow-lg w-[350px] border border-blue-500/30 hover:scale-105 transition-transform duration-500 mb-6" />
+                    </div>
+                    <div class="bg-blue-900/20 border border-blue-600/40 rounded-lg p-4 text-left w-full max-w-md">
+                        <h4 class="font-semibold text-blue-400 mb-1">🎯 Entregable</h4>
+                        <p class="text-sm text-gray-300">
+                            Modelo de base de datos aprobado, migraciones creadas y relaciones validadas entre entidades
+                            principales.
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/figma-pattern.svg')] bg-center bg-cover"></div>
 
@@ -483,7 +513,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/ai-pattern.svg')] bg-center bg-cover"></div>
 
@@ -513,7 +543,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/ai-pattern.svg')] bg-center bg-cover"></div>
 
@@ -544,7 +574,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/azure-pattern.svg')] bg-center bg-cover"></div>
 
@@ -577,7 +607,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/notificaciones-pattern.svg')] bg-center bg-cover">
             </div>
@@ -611,7 +641,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/calendario-pattern.svg')] bg-center bg-cover">
             </div>
@@ -644,7 +674,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/reportes-pattern.svg')] bg-center bg-cover"></div>
 
@@ -677,7 +707,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/test-pattern.svg')] bg-center bg-cover"></div>
 
@@ -705,7 +735,7 @@
             </div>
         </div>
 
-        <div class="section relative bg-slate-900 text-gray-100 overflow-hidden">
+        <div class="section border-t border-blue-50/20 max-sm:px-4 relative bg-slate-900 text-gray-100 overflow-hidden">
             <!-- Fondo sutil -->
             <div class="absolute inset-0 opacity-10 bg-[url('/assets/deploy-pattern.svg')] bg-center bg-cover"></div>
 
@@ -735,7 +765,7 @@
         </div>
 
         <!-- SECCIÓN 4: Stack Tecnológico -->
-        <div class="section bg-gradient-to-br from-slate-200 to-slate-300">
+        <div class="section max-sm:py-16 relative bg-gradient-to-br from-slate-200 to-slate-300">
             <div class="flex items-center justify-center h-full px-6 md:px-16">
                 <div class="max-w-6xl text-center w-full">
                     <h2
@@ -789,7 +819,7 @@
                         </div>
                         <div class="tech-item bg-white p-6 md:p-8 rounded-2xl text-center font-medium text-slate-900 border border-slate-100 transition-all hover:border-blue-500 hover:-translate-y-1 hover:shadow-xl cursor-pointer scale-in flex flex-col items-center justify-center"
                             data-tech="outlook">
-                            <div class="mb-2 md:mb-3 text-3xl md:text-4xl flex items-center justify-center">📧</div>
+                            <img src="outlook.svg" alt="Outlook Logo" class="w-12 h-12 mb-2 md:mb-3 inline-block" />
                             <div class="text-sm md:text-base">Outlook API</div>
                         </div>
                         <div class="tech-item bg-white p-6 md:p-8 rounded-2xl text-center font-medium text-slate-900 border border-slate-100 transition-all hover:border-blue-500 hover:-translate-y-1 hover:shadow-xl cursor-pointer scale-in flex flex-col items-center justify-center"
@@ -810,13 +840,44 @@
         </div>
 
         <!-- SECCIÓN 5: Inversión -->
-        <div class="section bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white">
+        <div class="section max-sm:py-16 relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white">
             <div class="flex items-center justify-center h-full px-6 md:px-16">
                 <div class="max-w-5xl text-center w-full">
                     <div
+                        id="investment-amount"
                         class="text-5xl md:text-8xl font-extrabold mb-4 md:mb-5 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent -tracking-widest fade-in">
                         $10.000.000
                     </div>
+                    <script>
+                        function animateInvestmentAmount() {
+                            const el = document.getElementById('investment-amount');
+                            const duration = 2000;
+                            const target = 10000000;
+                            let start = null;
+
+                            function formatNumber(n) {
+                                return '$' + n.toLocaleString('es-CO');
+                            }
+
+                            function step(ts) {
+                                if (!start) start = ts;
+                                const progress = Math.min((ts - start) / duration, 1);
+                                const value = Math.floor(progress * target);
+                                el.textContent = formatNumber(value);
+                                if (progress < 1) {
+                                    requestAnimationFrame(step);
+                                } else {
+                                    el.textContent = formatNumber(target);
+                                }
+                            }
+
+                            requestAnimationFrame(step);
+                        }
+
+                        setInterval(animateInvestmentAmount, 6000);
+                        // Run once on load
+                        animateInvestmentAmount();
+                    </script>
                     <p class="text-lg md:text-2xl opacity-90 mb-10 md:mb-16 fade-in">Inversión Total - Desarrollo
                         Completo en 3 Meses</p>
 
@@ -824,19 +885,106 @@
                         <div
                             class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
                             <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">40%</span>
-                            <div class="text-xl md:text-2xl font-semibold mb-3">$4.000.000</div>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-1">$4.000.000</div>
+                            <script>
+                                function animateInvestmentAmount1() {
+                                    const el = document.getElementById('investment-amount-1');
+                                    const duration = 2000;
+                                    const target = 4000000;
+                                    let start = null;
+
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
+
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
+
+                                    requestAnimationFrame(step);
+                                }
+
+                                setInterval(animateInvestmentAmount1, 6000);
+                                animateInvestmentAmount1();
+                            </script>
                             <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
                         </div>
                         <div
                             class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
                             <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
-                            <div class="text-xl md:text-2xl font-semibold mb-3">$3.000.000</div>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-2">$3.000.000</div>
+                            <script>
+                                function animateInvestmentAmount2() {
+                                    const el = document.getElementById('investment-amount-2');
+                                    const duration = 2000;
+                                    const target = 3000000;
+                                    let start = null;
+
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
+
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
+
+                                    requestAnimationFrame(step);
+                                }
+
+                                setInterval(animateInvestmentAmount2, 6000);
+                                animateInvestmentAmount2();
+                            </script>
                             <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
                         </div>
                         <div
                             class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
                             <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
-                            <div class="text-xl md:text-2xl font-semibold mb-3">$3.000.000</div>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-3">$3.000.000</div>
+                            <script>
+                                function animateInvestmentAmount3() {
+                                    const el = document.getElementById('investment-amount-3');
+                                    const duration = 2000;
+                                    const target = 3000000;
+                                    let start = null;
+
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
+
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
+
+                                    requestAnimationFrame(step);
+                                }
+
+                                setInterval(animateInvestmentAmount3, 6000);
+                                animateInvestmentAmount3();
+                            </script>
                             <p class="text-xs md:text-sm opacity-85">Entrega final</p>
                         </div>
                     </div>
@@ -862,69 +1010,66 @@
     <script>
         let isModalOpen = false;
 
-        // Base de datos de tecnologías
         const techData = {
             nextjs: {
                 icon: '<span class="iconify" data-icon="logos:nextjs-icon" style="font-size:3rem;"></span>',
                 title: 'Next.js',
-                description: 'Framework React de vanguardia para desarrollo web moderno. Permite crear aplicaciones web completas con renderizado del lado del servidor (SSR), generación estática (SSG) y optimizaciones automáticas de rendimiento.'
+                description: 'Framework React moderno con SSR y optimizaciones automáticas de rendimiento.'
             },
             nodejs: {
                 icon: '<span class="iconify" data-icon="logos:nodejs-icon" style="font-size:3rem;"></span>',
                 title: 'Node.js',
-                description: 'Entorno de ejecución JavaScript del lado del servidor. Diseñado para construir aplicaciones escalables con arquitectura orientada a eventos y E/O no bloqueante.'
+                description: 'Entorno de ejecución JavaScript del lado del servidor, ideal para apps escalables.'
             },
             postgresql: {
                 icon: '<span class="iconify" data-icon="logos:postgresql" style="font-size:3rem;"></span>',
                 title: 'PostgreSQL',
-                description: 'Sistema de gestión de base de datos relacional de código abierto más avanzado del mundo. Ofrece robustez, extensibilidad y conformidad con estándares SQL.'
+                description: 'Base de datos relacional avanzada, robusta y de código abierto.'
             },
             prisma: {
                 icon: '<span class="iconify" data-icon="logos:prisma" style="font-size:3rem;"></span>',
                 title: 'Prisma ORM',
-                description: 'ORM de nueva generación para Node.js y TypeScript. Proporciona acceso a base de datos type-safe, migraciones automáticas y un query builder intuitivo.'
+                description: 'ORM moderno para Node.js y TypeScript, con migraciones automáticas.'
             },
             puppeteer: {
                 icon: '<img src="puppeteer.png" alt="Puppeteer Logo" class="w-12 h-12 inline-block" />',
                 title: 'Puppeteer',
-                description: 'Biblioteca Node.js que proporciona una API de alto nivel para controlar Chrome/Chromium. Ideal para automatización web, scraping y generación de PDFs.'
+                description: 'Automatización web avanzada con control total de Chrome/Chromium.'
             },
             azure: {
                 icon: '<span class="iconify" data-icon="logos:microsoft-azure" style="font-size:3rem;"></span>',
                 title: 'Azure AI',
-                description: 'Plataforma de inteligencia artificial y servicios cognitivos de Microsoft. Proporciona APIs de OCR, análisis de documentos y procesamiento de lenguaje natural.'
+                description: 'Servicios cognitivos para OCR, IA y análisis de documentos.'
             },
             google: {
                 icon: '<span class="iconify" data-icon="logos:google-icon" style="font-size:3rem;"></span>',
                 title: 'Google APIs',
-                description: 'Conjunto de interfaces de programación que permiten integración con servicios de Google como Calendar, Gmail y Drive.'
+                description: 'Integraciones con Calendar, Gmail, Drive y otros servicios de Google.'
             },
             outlook: {
-                icon: '<div class="text-5xl">📧</div>',
+                icon: '<img src="outlook.svg" alt="Outlook Logo" class="w-12 h-12 inline-block" />',
                 title: 'Outlook API',
-                description: 'API de Microsoft para integración con Outlook y servicios de correo electrónico empresarial. Permite envío automático de notificaciones y gestión de calendarios corporativos.'
+                description: 'Gestión de correos y calendarios corporativos con Outlook.'
             },
             whatsapp: {
                 icon: '<span class="iconify" data-icon="logos:whatsapp-icon" style="font-size:3rem;"></span>',
                 title: 'WhatsApp API',
-                description: 'API oficial de WhatsApp Business para integrar mensajería instantánea en aplicaciones empresariales. Permite envío automatizado de notificaciones y recordatorios.'
+                description: 'Mensajería automatizada con la API oficial de WhatsApp Business.'
             },
             vercel: {
                 icon: '<span class="iconify" data-icon="logos:vercel-icon" style="font-size:3rem;"></span>',
                 title: 'Vercel',
-                description: 'Plataforma de deployment y hosting optimizada para aplicaciones React y Next.js. Ofrece despliegue automático, CDN global, y escalabilidad instantánea.'
+                description: 'Plataforma de hosting optimizada para React y Next.js.'
             }
         };
 
         function openTechModal(techKey) {
             const modal = document.getElementById('techModal');
             const data = techData[techKey];
-
             if (data) {
                 document.getElementById('modalIcon').innerHTML = data.icon;
                 document.getElementById('modalTitle').textContent = data.title;
                 document.getElementById('modalDescription').textContent = data.description;
-
                 modal.classList.add('active');
                 isModalOpen = true;
             }
@@ -936,73 +1081,87 @@
             isModalOpen = false;
         }
 
-        // Event listeners
         document.addEventListener('click', (e) => {
             const modal = document.getElementById('techModal');
-            if (e.target === modal) {
-                closeTechModal();
-            }
+            if (e.target === modal) closeTechModal();
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                closeTechModal();
+            if (e.key === 'Escape') closeTechModal();
+        });
+
+        // 🔹 Animaciones Fade y Scale universales (para mobile y desktop)
+        function triggerAnimations() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const scaleElements = document.querySelectorAll('.scale-in');
+
+            fadeElements.forEach((el, index) => {
+                setTimeout(() => el.classList.add('visible'), index * 100);
+            });
+
+            scaleElements.forEach((el, index) => {
+                setTimeout(() => el.classList.add('visible'), index * 120 + 200);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Aplicar animaciones iniciales
+            triggerAnimations();
+
+            // Modal de tecnologías
+            document.querySelectorAll('.tech-item[data-tech]').forEach(item => {
+                item.addEventListener('click', () => openTechModal(item.getAttribute('data-tech')));
+            });
+
+            // Detectar si es escritorio
+            const isDesktop = window.innerWidth >= 1024;
+
+            if (isDesktop) {
+                // ✅ FullPage.js solo en desktop
+                new fullpage('#fullpage', {
+                    navigation: true,
+                    navigationPosition: 'right',
+                    slidesNavigation: true,
+                    slidesNavPosition: 'bottom',
+                    controlArrows: true,
+                    scrollingSpeed: 1000,
+                    easing: 'easeInOutCubic',
+
+                    onLeave: function (origin, destination, direction) {
+                        if (isModalOpen) return false;
+                    },
+
+                    afterLoad: function (origin, destination, direction) {
+                        // Reaplicar animaciones por sección
+                        const fadeElements = destination.item.querySelectorAll('.fade-in');
+                        const scaleElements = destination.item.querySelectorAll('.scale-in');
+                        const timelineContent = destination.item.querySelectorAll('.timeline-content');
+
+                        fadeElements.forEach((el, index) => {
+                            setTimeout(() => el.classList.add('visible'), index * 150);
+                        });
+
+                        scaleElements.forEach((el, index) => {
+                            setTimeout(() => el.classList.add('visible'), index * 100 + 300);
+                        });
+
+                        timelineContent.forEach((el) => {
+                            el.style.opacity = '1';
+                            el.style.transform = 'translateY(0)';
+                        });
+                    }
+                });
+            } else {
+                // 🚫 En mobile/tablet: no usar fullpage, solo scroll natural
+                console.log('Fullpage.js desactivado en mobile/tablet');
+                document.body.style.overflowY = 'auto';
+                document.querySelectorAll('.section').forEach(section => {
+                    section.style.height = 'auto';
+                });
             }
         });
-
-        // Inicializar Fullpage.js
-        document.addEventListener('DOMContentLoaded', () => {
-            // Agregar event listeners a tecnologías
-            const techItems = document.querySelectorAll('.tech-item[data-tech]');
-            techItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const techKey = item.getAttribute('data-tech');
-                    openTechModal(techKey);
-                });
-            });
-
-            // Inicializar Fullpage.js
-            new fullpage('#fullpage', {
-                navigation: true,
-                navigationPosition: 'right',
-                slidesNavigation: true,
-                slidesNavPosition: 'bottom',
-                controlArrows: true,
-                scrollingSpeed: 1000,
-                easing: 'easeInOutCubic',
-                responsiveWidth: 768,
-
-                onLeave: function (origin, destination, direction) {
-                    if (isModalOpen) {
-                        return false;
-                    }
-                },
-
-                afterLoad: function (origin, destination, direction) {
-                    const fadeElements = destination.item.querySelectorAll('.fade-in');
-                    const scaleElements = destination.item.querySelectorAll('.scale-in');
-                    const timelineContent = destination.item.querySelectorAll('.timeline-content');
-
-                    fadeElements.forEach((el, index) => {
-                        setTimeout(() => {
-                            el.classList.add('visible');
-                        }, index * 150);
-                    });
-
-                    scaleElements.forEach((el, index) => {
-                        setTimeout(() => {
-                            el.classList.add('visible');
-                        }, index * 100 + 300);
-                    });
-
-                    timelineContent.forEach((el) => {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    });
-                }
-            });
-        });
     </script>
+
 </body>
 
 </html>
