@@ -840,190 +840,197 @@
         </div>
 
         <!-- SECCIÓN 5: Inversión -->
-        <div class="section max-md:py-16 relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white">
+        <div
+            class="section max-md:py-16 relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white">
             <div class="flex items-center justify-center h-full px-6 md:px-16">
-            <div class="max-w-5xl text-center w-full">
-            <div
-            id="investment-amount"
-            class="text-5xl md:text-8xl font-extrabold mb-4 md:mb-5 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent -tracking-widest fade-in">
-            $10.000.000
-            </div>
-            <script>
-            function animateInvestmentAmount() {
-                const el = document.getElementById('investment-amount');
-                const duration = 2000;
-                const target = 10000000;
-                let start = null;
+                <div class="max-w-5xl text-center w-full">
+                    <div id="investment-amount"
+                        class="text-5xl md:text-8xl font-extrabold mb-4 md:mb-5 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent -tracking-widest fade-in">
+                        $10.000.000
+                    </div>
+                    <script>
+                        function animateInvestmentAmount() {
+                            const el = document.getElementById('investment-amount');
+                            const duration = 2000;
+                            const target = 10000000;
+                            let start = null;
 
-                function formatNumber(n) {
-                return '$' + n.toLocaleString('es-CO');
-                }
+                            function formatNumber(n) {
+                                return '$' + n.toLocaleString('es-CO');
+                            }
 
-                function step(ts) {
-                if (!start) start = ts;
-                const progress = Math.min((ts - start) / duration, 1);
-                const value = Math.floor(progress * target);
-                el.textContent = formatNumber(value);
-                if (progress < 1) {
-                requestAnimationFrame(step);
-                } else {
-                el.textContent = formatNumber(target);
-                }
-                }
+                            function step(ts) {
+                                if (!start) start = ts;
+                                const progress = Math.min((ts - start) / duration, 1);
+                                const value = Math.floor(progress * target);
+                                el.textContent = formatNumber(value);
+                                if (progress < 1) {
+                                    requestAnimationFrame(step);
+                                } else {
+                                    el.textContent = formatNumber(target);
+                                }
+                            }
 
-                requestAnimationFrame(step);
-            }
+                            requestAnimationFrame(step);
+                        }
 
-            setInterval(animateInvestmentAmount, 6000);
-            // Run once on load
-            animateInvestmentAmount();
-            </script>
-            <p class="text-lg md:text-2xl opacity-90 mb-10 md:mb-16 fade-in">Inversión Total - Desarrollo
-            Completo en 3 Meses</p>
+                        setInterval(animateInvestmentAmount, 6000);
+                        // Run once on load
+                        animateInvestmentAmount();
+                    </script>
+                    <p class="text-lg md:text-2xl opacity-90 mb-10 md:mb-16 fade-in">Inversión Total - Desarrollo
+                        Completo en 3 Meses</p>
 
-            <div class="mb-8 fade-in text-base md:text-lg text-white/80">
-                <span class="font-semibold">Nota:</span> El valor presentado es negociable y puede ajustarse según las necesidades específicas del proyecto o acuerdos entre las partes.
-            </div>
+                    <div class="mb-8 fade-in text-base md:text-lg text-white/80">
+                        <span class="font-semibold">Nota:</span> El valor presentado es negociable y puede ajustarse
+                        según las necesidades específicas del proyecto o acuerdos entre las partes.
+                    </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div
-                class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
-                <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">40%</span>
-                <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-1">$4.000.000</div>
-                <script>
-                function animateInvestmentAmount1() {
-                const el = document.getElementById('investment-amount-1');
-                const duration = 2000;
-                const target = 4000000;
-                let start = null;
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                        <div
+                            class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
+                            <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">40%</span>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-1">$4.000.000
+                            </div>
+                            <script>
+                                function animateInvestmentAmount1() {
+                                    const el = document.getElementById('investment-amount-1');
+                                    const duration = 2000;
+                                    const target = 4000000;
+                                    let start = null;
 
-                function formatNumber(n) {
-                return '$' + n.toLocaleString('es-CO');
-                }
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
 
-                function step(ts) {
-                if (!start) start = ts;
-                const progress = Math.min((ts - start) / duration, 1);
-                const value = Math.floor(progress * target);
-                el.textContent = formatNumber(value);
-                if (progress < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    el.textContent = formatNumber(target);
-                }
-                }
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
 
-                requestAnimationFrame(step);
-                }
+                                    requestAnimationFrame(step);
+                                }
 
-                setInterval(animateInvestmentAmount1, 6000);
-                animateInvestmentAmount1();
-                </script>
-                <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
-            </div>
-            <div
-                class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
-                <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
-                <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-2">$3.000.000</div>
-                <script>
-                function animateInvestmentAmount2() {
-                const el = document.getElementById('investment-amount-2');
-                const duration = 2000;
-                const target = 3000000;
-                let start = null;
+                                setInterval(animateInvestmentAmount1, 6000);
+                                animateInvestmentAmount1();
+                            </script>
+                            <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
+                        </div>
+                        <div
+                            class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
+                            <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-2">$3.000.000
+                            </div>
+                            <script>
+                                function animateInvestmentAmount2() {
+                                    const el = document.getElementById('investment-amount-2');
+                                    const duration = 2000;
+                                    const target = 3000000;
+                                    let start = null;
 
-                function formatNumber(n) {
-                return '$' + n.toLocaleString('es-CO');
-                }
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
 
-                function step(ts) {
-                if (!start) start = ts;
-                const progress = Math.min((ts - start) / duration, 1);
-                const value = Math.floor(progress * target);
-                el.textContent = formatNumber(value);
-                if (progress < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    el.textContent = formatNumber(target);
-                }
-                }
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
 
-                requestAnimationFrame(step);
-                }
+                                    requestAnimationFrame(step);
+                                }
 
-                setInterval(animateInvestmentAmount2, 6000);
-                animateInvestmentAmount2();
-                </script>
-                <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
-            </div>
-            <div
-                class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
-                <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
-                <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-3">$3.000.000</div>
-                <script>
-                function animateInvestmentAmount3() {
-                const el = document.getElementById('investment-amount-3');
-                const duration = 2000;
-                const target = 3000000;
-                let start = null;
+                                setInterval(animateInvestmentAmount2, 6000);
+                                animateInvestmentAmount2();
+                            </script>
+                            <p class="text-xs md:text-sm opacity-85">Finalización Fase 2</p>
+                        </div>
+                        <div
+                            class="bg-white/15 backdrop-blur-xl p-8 md:p-10 rounded-3xl text-center border border-white/30 transition-all duration-300 hover:-translate-y-2 hover:scale-105 hover:shadow-2xl hover:border-blue-500/50 scale-in">
+                            <span class="block text-4xl md:text-5xl font-extrabold text-white mb-2">30%</span>
+                            <div class="text-xl md:text-2xl font-semibold mb-3" id="investment-amount-3">$3.000.000
+                            </div>
+                            <script>
+                                function animateInvestmentAmount3() {
+                                    const el = document.getElementById('investment-amount-3');
+                                    const duration = 2000;
+                                    const target = 3000000;
+                                    let start = null;
 
-                function formatNumber(n) {
-                return '$' + n.toLocaleString('es-CO');
-                }
+                                    function formatNumber(n) {
+                                        return '$' + n.toLocaleString('es-CO');
+                                    }
 
-                function step(ts) {
-                if (!start) start = ts;
-                const progress = Math.min((ts - start) / duration, 1);
-                const value = Math.floor(progress * target);
-                el.textContent = formatNumber(value);
-                if (progress < 1) {
-                    requestAnimationFrame(step);
-                } else {
-                    el.textContent = formatNumber(target);
-                }
-                }
+                                    function step(ts) {
+                                        if (!start) start = ts;
+                                        const progress = Math.min((ts - start) / duration, 1);
+                                        const value = Math.floor(progress * target);
+                                        el.textContent = formatNumber(value);
+                                        if (progress < 1) {
+                                            requestAnimationFrame(step);
+                                        } else {
+                                            el.textContent = formatNumber(target);
+                                        }
+                                    }
 
-                requestAnimationFrame(step);
-                }
+                                    requestAnimationFrame(step);
+                                }
 
-                setInterval(animateInvestmentAmount3, 6000);
-                animateInvestmentAmount3();
-                </script>
-                <p class="text-xs md:text-sm opacity-85">Entrega final</p>
-            </div>
-            </div>
-            </div>
+                                setInterval(animateInvestmentAmount3, 6000);
+                                animateInvestmentAmount3();
+                            </script>
+                            <p class="text-xs md:text-sm opacity-85">Entrega final</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- SECCIÓN 6: Contacto -->
         <div class="section max-md:py-16 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-slate-900">
             <div class="flex items-center justify-center h-full px-6 md:px-16">
-            <div class="max-w-xl w-full text-center py-12">
-                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent fade-in">
-                ¿Interesado en llevar SEGISPRO al siguiente nivel?
-                </h2>
-                <p class="text-base md:text-xl mb-8 fade-in">
-                Si deseas negociar la propuesta, formalizar el acuerdo o resolver dudas sobre el cronograma y entregables, contáctame directamente.<br>
-                Estoy listo para acompañarte en la transformación digital de tu operación.
-                </p>
-                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="https://wa.me/5777313796284" target="_blank"
-                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold text-lg shadow-lg transition-all duration-200 fade-in">
-                    <span class="iconify" data-icon="logos:whatsapp-icon" style="font-size:1.7rem;"></span>
-                    WhatsApp Negociación
-                </a>
-                <a href="mailto:1227jldev@gmail.com"
-                    class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-blue-50 text-blue-700 font-semibold text-lg shadow-lg transition-all duration-200 fade-in">
-                    <img src="outlook.svg" alt="Outlook Logo" class="w-7 h-7 inline-block" />
-                    Formalizar por Email
-                </a>
+                <div class="max-w-xl w-full text-center py-12">
+                    <h2
+                        class="text-3xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-blue-700 to-blue-400 bg-clip-text text-transparent fade-in">
+                        ¿Interesado en llevar SEGISPRO al siguiente nivel?
+                    </h2>
+                    <p class="text-base md:text-xl mb-8 fade-in">
+                        Si deseas negociar la propuesta, formalizar el acuerdo o resolver dudas sobre el cronograma y
+                        entregables, contáctame directamente.<br>
+                        Estoy listo para acompañarte en la transformación digital de tu operación.
+                    </p>
+                    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <a href="https://wa.me/5777313796284" target="_blank"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-500 hover:bg-green-600 text-white font-semibold text-lg shadow-lg transition-all duration-200 fade-in">
+                            <span class="iconify" data-icon="logos:whatsapp-icon" style="font-size:1.7rem;"></span>
+                            WhatsApp Negociación
+                        </a>
+                        <a href="mailto:1227jldev@gmail.com"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-blue-50 text-blue-700 font-semibold text-lg shadow-lg transition-all duration-200 fade-in">
+                            <img src="outlook.svg" alt="Outlook Logo" class="w-7 h-7 inline-block" />
+                            Formalizar por Email
+                        </a>
+                    </div>
+                    <div class="mt-8 text-sm text-slate-700 fade-in">
+                        <span class="font-semibold">¿Quieres una demo personalizada o discutir detalles
+                            específicos?</span><br>
+                        Escríbeme y agendamos una reunión según tu disponibilidad.
+                    </div>
                 </div>
-                <div class="mt-8 text-sm text-slate-700 fade-in">
-                <span class="font-semibold">¿Quieres una demo personalizada o discutir detalles específicos?</span><br>
-                Escríbeme y agendamos una reunión según tu disponibilidad.
-                </div>
-            </div>
             </div>
         </div>
     </div>
@@ -1197,4 +1204,5 @@
         });
     </script>
 </body>
+
 </html>
